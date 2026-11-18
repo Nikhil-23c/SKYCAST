@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkyCast — City Weather</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<main class="shell">
+<header class="topbar"><a class="brand" href="#"><span>☼</span> skycast</a><small>● LIVE WEATHER</small></header>
+<section class="intro"><p class="eyebrow">YOUR DAILY WEATHER COMPANION</p><h1>Forecasts made <em>feel-good.</em></h1><p>A little sunshine, a little clarity. Find out what's happening outside.</p></section>
+<section class="search-area">
+<form id="search-form"><span class="search-icon">⌕</span><label class="sr-only" for="city-input">Search city</label><input id="city-input" type="search" maxlength="80" placeholder="Search a city… e.g. Coimbatore" autocomplete="off"><button id="search-button">Search <b>→</b></button></form>
+<p class="hint">Try a city anywhere in the world</p><div id="status" role="status" aria-live="polite" hidden></div>
+</section>
+<section id="weather-content" hidden>
+<div class="location"><div><p class="eyebrow">CURRENT WEATHER</p><h2 id="location-name">—</h2><p class="muted" id="local-date">—</p></div><span class="pill" id="weather-description">—</span></div>
+<article class="current">
+<div class="current-main"><span id="current-icon" class="big-icon">☀️</span><div><div class="temperature"><span id="current-temp">--</span>°</div><p class="muted" id="feels-like">Feels like --°</p></div></div>
+<div class="summary"><p id="current-summary">Today's conditions</p><div class="highlow"><span>↑ <b id="today-high">--°</b></span><span>↓ <b id="today-low">--°</b></span></div></div>
+<div class="metrics">
+<div><span>💧</span><small>Humidity</small><b id="humidity">--%</b></div>
+<div><span>💨</span><small>Wind</small><b id="wind">-- km/h</b></div>
+<div><span>🌡️</span><small>Feels like</small><b id="feels-metric">--°</b></div>
+</div>
+</article>
+<div class="forecast-heading"><div><p class="eyebrow">PLAN AHEAD</p><h2>Next five days</h2></div><small>A quick look ahead</small></div>
+<div id="forecast" class="forecast-grid"></div>
+<p class="credit">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>.</p>
+</section>
+<footer>Made for brighter days <span>✦</span></footer>
+</main>
+</body></html>
